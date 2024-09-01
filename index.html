@@ -10,22 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
-      If you're not using Tailwind, you may delete the <script> -->
-    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="icon" href="img/favicon.ico" sizes="any" />
     <style>
       /* CSS for fixed image */
+      .fixed-image {
+        width: 340px; /* Set a fixed width */
+        height: auto; /* Maintain aspect ratio */
+        min-width: 340px; /* Prevent shrinking */
+        object-fit: cover; /* Keep the aspect ratio intact */
+      }
     </style>
   </head>
+
   <body>
-    <!-- Add your site or application content here -->
     <main style="background-color: #f9fafb">
       <article
         class="w-full flex flex-row gap-12 h-screen justify-center items-center"
@@ -54,22 +53,11 @@
             </button>
           </div>
         </section>
-        <div>
-          <img
-            src="img/prism.png"
-            alt="Image"
-            class="w-[px] flex flex-col"
-          />
+        <div class="flex flex-col items-center justify-center">
+          <img src="img/prism.png" alt="Image" class="fixed fixed-image" />
         </div>
       </article>
     </main>
-
-    <!-- Well crafted abstract images
-      High quality abstract images for your projects, wallpaper and presentations.
-      Learn more
-      See pricing -->
-
-    <!-- Attribute this challenge to yourself! -->
 
     <script src="js/index.js"></script>
   </body>
