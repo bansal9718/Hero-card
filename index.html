@@ -22,22 +22,6 @@
     <link rel="icon" href="img/favicon.ico" sizes="any" />
     <style>
       /* CSS for fixed image */
-      .fixed-image {
-        top: 50%; /* Vertically center */
-        right: 20px; /* Adjust horizontal position */
-        transform: translateY(-50%); /* Center vertically */
-        width: 340px; /* Fixed width */
-        height: auto; /* Maintain aspect ratio */
-        min-width: 340px; /* Prevent shrinking */
-        z-index: 10; /* Ensure it stays on top */
-      }
-
-      /* Optional: Prevents layout shifts on smaller screens */
-      @media (max-width: 600px) {
-        .fixed-image {
-          right: 10px; /* Adjust position for smaller screens */
-        }
-      }
     </style>
   </head>
   <body>
@@ -70,8 +54,12 @@
             </button>
           </div>
         </section>
-        <div class="h-screen">
-          <img src="img/prism.png" alt="Image" class="fixed-image" />
+        <div>
+          <img
+            src="img/prism.png"
+            alt="Image"
+            class="w-[px] flex flex-col"
+          />
         </div>
       </article>
     </main>
